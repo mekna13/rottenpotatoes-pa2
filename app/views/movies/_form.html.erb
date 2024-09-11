@@ -11,27 +11,39 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="inputs">
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
-  <div>
+  <div class="inputs">
     <%= form.label :rating, style: "display: block" %>
     <%= form.text_field :rating %>
   </div>
 
-  <div>
+  <div class="inputs">
     <%= form.label :description, style: "display: block" %>
     <%= form.text_field :description %>
   </div>
 
-  <div>
+  <div class="inputs">
     <%= form.label :release_date, style: "display: block" %>
     <%= form.text_field :release_date %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit style: " background-color:  #4CAF50;
+    border: 1px black solid;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: auto;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;" %>
   </div>
 <% end %>

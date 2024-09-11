@@ -13,3 +13,99 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    text-align: center !important;
+}
+button {
+    background-color:  #4CAF50;
+    border: 1px black solid;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: auto;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button a{
+    color: white;
+    text-decoration: none;
+}
+
+.movie {
+    width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    background-color: #fff;
+    margin: 50px auto; /* This will center the card */
+}
+.movie h1{
+    text-align: center;
+}
+.movie h2{
+    text-align: center;
+}
+
+.inputs{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.inputs label{
+    width: 100px;
+    text-align: right;
+}
+
+.filtered-up{
+    background-color: #42DB9C;
+}
+
+.filtered-down{
+    background-color: #DBB042;
+}
+
+.select{
+    width: 400px;
+    margin: 20px 0;
+}
+
+.select select{
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}

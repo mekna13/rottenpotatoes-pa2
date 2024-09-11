@@ -3,14 +3,58 @@
 <% content_for :title, "Movies" %>
 
 <h1>Movies</h1>
-
+  <div data-controller="hello" class="select">
+    <label for="select">Sort by:</label>
+    <select data-controller="select" aria-label="select">
+      <option value="title asc">Title ASC</option>
+      <option value="title desc">Title DESC</option>
+      <option value="release_date asc">Release Date ASC</option>
+      <option value="release_date desc">Release Date DESC</option>
+      <option value="rating asc">Rating ASC</option>
+      <option value="rating desc">Rating DESC</option>
+    </select>
+  </div>
 <div id="movies">
-  <% @movies.each do |movie| %>
-    <%= render movie %>
-    <p>
-      <%= link_to "Show this movie", movie %>
-    </p>
-  <% end %>
+  <table>
+    <thead>
+      <tr>
+        <th class="<%= 'filtered-up' if session[:sort] == 'title asc' %> <%= 'filtered-down' if session[:sort] == 'title desc' %>">Title
+        <% if session[:sort] == 'title asc' %>
+          <span>&uarr;</span>
+        <% elsif session[:sort] == 'title desc' %>
+          <span>&darr;</span>
+        <% end %>
+        </th>
+        <th class="<%= 'filtered-up' if session[:sort] == 'rating asc' %> <%= 'filtered-down' if session[:sort] == 'rating desc' %>">Rating
+        <% if session[:sort] == 'rating asc' %>
+          <span>&uarr;</span>
+        <% elsif session[:sort] == 'rating desc' %>
+          <span>&darr;</span>
+        <% end %></th>
+        <th>Description</th>
+        <th class="<%= 'filtered-up' if session[:sort] == 'release_date asc' %> <%= 'filtered-down' if session[:sort] == 'release_date desc' %>">Release Date
+          <% if session[:sort] == 'release_date asc' %>
+          <span>&uarr;</span>
+        <% elsif session[:sort] == 'release_date desc' %>
+          <span>&darr;</span>
+        <% end %></th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @movies.each do |movie| %>
+        <tr>
+        <%= render movie %>
+        <td>
+          <%= link_to "Show this movie", movie %>
+        </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <button>
+    <%= link_to "Create New Movie", new_movie_path %>
+  </button>
 </div>
 
-<%= link_to "New movie", new_movie_path %>
+
