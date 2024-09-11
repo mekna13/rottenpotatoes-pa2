@@ -1,24 +1,8 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rotten Potatoes
 
-Things you may want to cover:
+Welcome to Rotten Potatoes, a simple movie review app!
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Deployed on Heroku
+**[Rotten Potatoes on Heroku](https://rottenpotatoes-pa2-8f113325e625.herokuapp.com/)**

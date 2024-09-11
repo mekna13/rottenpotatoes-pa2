@@ -27,7 +27,9 @@ more_movies = [
   { title: 'The Devil Wears Prada', rating: 'PG-13', release_date: '30-Jun-2006' },
   { title: 'Deadpool & Wolverine', rating: 'R', release_date: '03-May-2024' }]
 
-  
 more_movies.each do |movie|
-  Movie.create!(movie)
+  Movie.find_or_create_by!(title: movie[:title]) do |m|
+    m.rating = movie[:rating]
+    m.release_date = movie[:release_date]
+  end
 end
